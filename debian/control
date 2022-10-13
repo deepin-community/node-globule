@@ -1,0 +1,42 @@
+Source: node-globule
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Section: javascript
+Priority: optional
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends:
+ debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-lodash <!nocheck>
+ , nodeunit <!nocheck>
+Standards-Version: 4.5.1
+Vcs-Browser: https://salsa.debian.org/js-team/node-globule
+Vcs-Git: https://salsa.debian.org/js-team/node-globule.git
+Homepage: https://github.com/cowboy/node-globule
+Rules-Requires-Root: no
+
+Package: node-globule
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , node-glob (>= 7.1.1)
+ , node-lodash (>= 4.16.4)
+ , node-minimatch (>= 3.0.2)
+Description: Easy-to-use wildcard globbing library for Node.js
+ globule is an easy-to-use wildcard globbing library for Node.js.
+ .
+ The library offers functions like find(), match() and mapping() that support
+ globbing patterns.
+ .
+ globule.find returns a unique array of all file or directory paths that match
+ the given globbing pattern(s).
+ .
+ globule.match can be used to match one or more globbing patterns against one
+ or more file paths.
+ .
+ globule.mapping returns an array of src-dest file mapping objects for
+ the given set of source file paths.
+ .
+ This package contains the globule module for Node.js.
+ .
+ Node.js is an event-based server-side JavaScript engine.

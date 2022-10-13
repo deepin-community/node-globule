@@ -1,0 +1,6 @@
+version=4
+opts=\
+dversionmangle=auto,\
+filenamemangle=s/.*\/v?([\d\.-]+)\.tar\.gz/node-globule-$1.tar.gz/ \
+https://github.com/cowboy/node-globule/tags \
+.*/archive/v?([\d\.]+).tar.gz
